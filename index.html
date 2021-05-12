@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+          <a href="http://robdunnlab.com/projects/belly-button-biodiversity/most-common/" target="_blank">Visit Rub Dunn Lab</a>
+          <p>The most common skin bacteria encountered on participants in the Belly Button Biodiversity Project belonged to the groups Staphylococci, Corynebacteria, Actinobacteria, Clostridiales, and Bacilli.</p>
+          <p>More information found <cite>[http://robdunnlab.com/projects/belly-button-biodiversity/most-common/]</cite></p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+          <a href="https://www.theatlantic.com/health/archive/2012/12/1-458-bacteria-species-new-to-science-found-in-our-belly-buttons/266360/" target="_blank">Visit The Atlantic</a>
+          <p>There is a surprising lack of awareness on the public's part as to what can accumulate in a belly button ... the volume of material increases as the patient ages and, just like their arteries, can harden. I like to think of it as a cache of a lifetime of little treasures. ... Most patients have not received adequate instruction on proper umbilical hygiene. It has not received the same level of attention that the area behind the ears has. ... There is a technique to cleaning the belly button. It involves soap and water and gentle probing. ... Alcohol should not be used, in order to not disturb the delicate pH balance of the area.</p>
+          <p>More information found <cite>[https://www.theatlantic.com/health/archive/2012/12/1-458-bacteria-species-new-to-science-found-in-our-belly-buttons/266360/]</cite></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <a href="https://globalnews.ca/news/3205025/this-is-the-one-part-of-your-body-with-the-most-bacteria-buildup-according-to-experts/" target="_blank">Visit Global News</a>
+        <p>According to dermatologist Dr. Lisa Kellett of DLK Cosmetic Dermatology and Laser Clinic in Toronto, navels make for an ideal space for bacterial breeding, especially when excess weight and piercings are concerned.
+
+          “Any fold where it’s warm and moist is where bacteria can breed,” Kellett says. “People who are very overweight and people with diabetes, especially Type 2, are at a higher risk of accumulating bacteria and getting infections to those areas.”</p>
+          <p>More information found <cite>[https://globalnews.ca/news/3205025/this-is-the-one-part-of-your-body-with-the-most-bacteria-buildup-according-to-experts/]</cite></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="samples.json"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
